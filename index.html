@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1 = ['Hello!', 'Oranges', 'Age'];
+        var maxIndex = 0;
+        var currenIndex = 0;
+        var maxLength = 0;
+        for (const str of arr1) {
+            if(maxLength<str.length){
+                maxLength = str.length;
+                maxIndex = currenIndex;
+            }
+            currenIndex++;
+        }
+        var maxStr = arr1[maxIndex];
+        var arr2 = new Array(maxLength);
+        currenIndex = 0;
+        for (const ch of maxStr) {
+            arr2[currenIndex] = ch;
+            currenIndex++;
+        }
+        console.log(arr2);
+    </script>
+
+</body>
+</html>
